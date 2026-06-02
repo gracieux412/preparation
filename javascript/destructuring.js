@@ -44,4 +44,30 @@ console.log(newArray.length)
 console.log("the last item in the new array is "+newArray.pop())
 console.log(`the appended item in the new array ${newArray.push(34)}`)
 console.log("array new length is "+newArray.length)
+
+
+//finding the total to the items in the array using two method and checking for effeciency in the methods
+
+//using the reduced method
 console.log(newArray)
+
+console.time("reduced method")
+const totalUseReduced = newArray.reduce((prev, curr) =>{
+    return prev + curr
+},0)
+console.timeEnd("reduced method")
+
+console.log(`the total using the reduced method is ${totalUseReduced} \n`)
+
+
+//using the for loop
+let sum = 0
+console.time("for loop")
+for(let i = 0; i < newArray.length; i++){
+     sum += newArray[i]
+}
+console.timeEnd("for loop")
+
+console.log(`the total using the for loop is ${sum}`)
+
+
