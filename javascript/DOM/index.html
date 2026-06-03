@@ -1,14 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <span class="material-symbols-outlined"> menu </span>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <!-- adding a mega menu on services -->
+        <li>
+          <a href="#">Services</a>
+          <ul class="mega-menu">
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Mobile Development</a></li>
+            <li><a href="#">UI/UX Design</a></li>
+            <li><a href="#">Digital Marketing</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Innovations</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <div class="container">
+        <h1>Best of Tech Solutions</h1>
+        <p>Cutting-edge Tech and Innovation</p>
+      </div>
+    </div>
 
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

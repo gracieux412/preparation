@@ -1,0 +1,177 @@
+/* your existing styles (kept as is) */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background: linear-gradient(to right, #0e2d51, #10243a);
+    color: white;
+    padding: 40px;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 25px;
+    margin-left: 40px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: orange
+}
+
+/* ========== PROFESSIONAL MEGA MENU STYLES ========== */
+/* Position mega menu container */
+nav > ul > li {
+    position: relative;
+}
+
+/* Mega menu dropdown */
+.mega-menu {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: #ffffff;
+    min-width: 500px;
+    width: max-content;
+    max-width: 90vw;
+    padding: 1.8rem 2rem;
+    list-style: none;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+    gap: 1rem 2rem;
+}
+
+/* Show mega menu on hover */
+nav ul li:hover .mega-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Mega menu individual items */
+.mega-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.mega-menu li a {
+    color: #1e293b;
+    text-decoration: none;
+    display: block;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    background: transparent;
+}
+
+.mega-menu li a:hover {
+    background: #f1f5f9;
+    color: #0e2d51;
+    text-decoration: none;
+    transform: translateX(5px);
+}
+
+/* Optional: Add a subtle arrow indicator to Services menu item */
+nav > ul > li:has(.mega-menu) > a::after {
+    content: " ▼";
+    font-size: 0.7rem;
+    display: inline-block;
+    transition: transform 0.2s;
+    opacity: 0.8;
+}
+
+nav > ul > li:has(.mega-menu):hover > a::after {
+    transform: rotate(180deg);
+}
+
+/* Small arrow/triangle on top of mega menu */
+.mega-menu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #ffffff;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    nav {
+        padding: 20px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    nav ul li {
+        margin-right: 15px;
+    }
+    
+    .mega-menu {
+        position: static;
+        transform: none;
+        min-width: auto;
+        width: 100%;
+        margin-top: 10px;
+        padding: 1rem;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        box-shadow: none;
+        border: 1px solid #e2e8f0;
+    }
+    
+    .mega-menu::before {
+        display: none;
+    }
+    
+    nav ul li:hover .mega-menu {
+        transform: none;
+    }
+    
+    .mega-menu li a {
+        padding: 8px 12px;
+    }
+}
+
+/* adding menu items under menu icon vertically */
+
+
+/* Hero section (your existing style) */
+.hero {
+    background-image: url("/DOM/images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+}
