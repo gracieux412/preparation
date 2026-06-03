@@ -13,3 +13,5 @@ const printName = (name)=> {
     return "Hello "+name
 }
 console.log(printName("Bob"))
+
+
